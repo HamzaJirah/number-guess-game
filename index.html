@@ -8,7 +8,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+  <div class="container">
+    <header class="header">
+      <h1>Number Guessing Game</h1>
+      <p>Enter a number between <span class="min-num"></span> and <span class="max-num"></span></p>
+    </header>
+    <main class="content">
+      <input type="number" id="guess-number">
+      <input type="submit" value="Submit Guess" id="submit-guess">
+      <p id="score-update"></p>
+    </main>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
