@@ -1,0 +1,55 @@
+/* Imported google font */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+/* Remove Default browser styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lobster', cursive;
+  background: gainsboro;
+}
+
+/* Container */
+.container {
+  margin: 50px auto;
+  padding: 15px;
+  max-width: 450px;
+  background: papayawhip;
+  text-align: center;
+}
+
+/* first input field*/
+.content input[type="number"] {
+  font-family: 'Lobster', cursive;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  height: 20px;
+}
+
+.content input[type="number"]:focus {
+  outline: 1px solid gainsboro;
+}
+
+/* Second input field*/
+.content > input:nth-child(2) {
+  font-family: 'Lobster', cursive;
+  display: inline-block;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: 5px;
+  padding: 2px;
+  cursor: pointer;
+  background: green;
+}
+
+.content > input:nth-child(2):hover {
+  background: none;
+  border: 1px solid green;
+  color: #000;
+}
