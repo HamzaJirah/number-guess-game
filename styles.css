@@ -18,8 +18,11 @@ body {
   margin: 50px auto;
   padding: 15px;
   max-width: 450px;
+  height: 250px;
   background: papayawhip;
   text-align: center;
+  box-shadow: 2px 0 2px 2px rgb(233, 213, 182);
+  border-radius: 5px;
 }
 
 /* first input field*/
