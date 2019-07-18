@@ -1,0 +1,4 @@
+1. A player enters a number between 1-20 to win.
+2 The winning number would be randomly generated.
+3. A player can only make three attempts to win, and gets penalized for every wrong entry made.
+4. Once a player exceeds the maximum allowable attempts and lose, the input field is disabled and the player can play again. This also applies to the situtation when a player wins.
