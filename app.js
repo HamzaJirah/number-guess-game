@@ -11,6 +11,8 @@ let guess = document.querySelector('#guess-number');
 const submitGuess = document.querySelector('#submit-guess');
 const message = document.querySelector('#score-update');
 
+// convert user input to a Number
+
 // set text content of minimumNum and maximumNum
 minimumNum.textContent = min;
 maximumNum.textContent = max;
@@ -19,9 +21,9 @@ maximumNum.textContent = max;
 submitGuess.addEventListener('mousedown', () => {
   // validate user input
   let guessInput = parseInt(guess.value);
-  if (isNaN(guessInput)) {
-    message.textContent = `Your entry is not a Number`;
-    message.style.color = 'red';
+  if(isNaN(guessInput)){
+    message.textContent = `Your entry not a number`;
+    message.style.color = 'red'; 
   } else if (guessInput < min) {
     message.textContent = `Your entry ${guessInput} is less than ${min}`;
     message.style.color = 'red';
@@ -32,8 +34,17 @@ submitGuess.addEventListener('mousedown', () => {
     // invoke play game function
     playGame();
   }
-  return guessInput;
 })
+
+// Play game 
+const playGame = () => {
+  let input = parseInt(guess.value);
+  if(input === winningNum){
+    message.textContent = `Your entry ${input} is correct, YOU WON!`
+    message.style.color = 'green';
+  } 
+}
+
 
 
 
