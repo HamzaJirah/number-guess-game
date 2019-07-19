@@ -7,6 +7,8 @@ const min = 1,
 // Get reference to DOM elements
 const minimumNum = document.querySelector('.min-num');
 const maximumNum = document.querySelector('.max-num');
+const guess = document.querySelector('#guess-number');
+const submitGuess = document.querySelector('#submit-guess');
 
 // set text content of minimumNum and maximumNum
 minimumNum.textContent = min;
