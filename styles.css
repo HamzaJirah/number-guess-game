@@ -61,3 +61,7 @@ body {
   border: 1px solid green;
   color: #000;
 }
+
+.danger {
+  color: red;
+}
