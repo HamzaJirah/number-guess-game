@@ -17,7 +17,7 @@ maximumNum.textContent = max;
 
 // listen for user submission
 submitGuess.addEventListener('click', () => {
-  // check user input
+  // validate user input
   if(guess === isNaN() || guess < min || guess > max){
 
   }
