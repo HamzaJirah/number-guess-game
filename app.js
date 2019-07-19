@@ -19,7 +19,10 @@ maximumNum.textContent = max;
 submitGuess.addEventListener('click', () => {
   // validate user input
   let guessInput = parseInt(guess.value);
-  
+  if(isNaN(guessInput)){
+    
+  }
 })
+
 
 
