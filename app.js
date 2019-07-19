@@ -50,7 +50,7 @@ const playGame = () => {
     message.style.color = 'green';
   } else if(input !== winningNum){
     guessRemaining -= 1;
-    message.textContent = `Your entry ${input} in incorrect, ${guessRemaining} attempts left`;
+    message.textContent = `Your entry ${input} in incorrect, you have ${guessRemaining}attempts remaining`;
   } 
 }
 
