@@ -1,7 +1,8 @@
 // global variables
-const min = 1;
-const max = 20;
-const winningNum = 2;
+const min = 1,
+      max = 20,
+      winningNum = 2,
+      guessRemaining = 3;
 
 // Get reference to DOM elements
 const minimumNum = document.querySelector('.min-num');
