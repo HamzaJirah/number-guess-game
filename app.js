@@ -1,8 +1,9 @@
 // global variables
 const min = 1,
-      max = 20,
-      winningNum = 2,
-      guessRemaining = 3;
+      max = 10,
+      winningNum = getRandomNum();
+      
+let guessRemaining = 3;
 
 // Get reference to DOM elements
 const minimumNum = document.querySelector('.min-num');
@@ -36,12 +37,20 @@ submitGuess.addEventListener('mousedown', () => {
   }
 })
 
+// generate random number 
+function getRandomNum(){
+  Math.floor(Math.random() * (max-min) +1);
+}
+
 // Play game 
 const playGame = () => {
   let input = parseInt(guess.value);
   if(input === winningNum){
     message.textContent = `Your entry ${input} is correct, YOU WON!`
     message.style.color = 'green';
+  } else if(input !== winningNum){
+    guessRemaining -= 1;
+    message.textContent = `Your entry ${input} in incorrect, ${guessRemaining} left`;
   } 
 }
 
