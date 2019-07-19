@@ -7,7 +7,7 @@ const min = 1,
 // Get reference to DOM elements
 const minimumNum = document.querySelector('.min-num');
 const maximumNum = document.querySelector('.max-num');
-const guess = document.querySelector('#guess-number');
+const guess = document.querySelector('#guess-number').value;
 const submitGuess = document.querySelector('#submit-guess');
 const message = document.querySelector('#score-update');
 
@@ -17,5 +17,10 @@ maximumNum.textContent = max;
 
 // listen for user submission
 submitGuess.addEventListener('click', () => {
-  
+  // check user input
+  if(guess === isNaN() || guess < min || guess > max){
+
+  }
 })
+
+
