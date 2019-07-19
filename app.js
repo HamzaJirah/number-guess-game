@@ -16,13 +16,25 @@ minimumNum.textContent = min;
 maximumNum.textContent = max;
 
 // listen for user submission
-submitGuess.addEventListener('click', () => {
+submitGuess.addEventListener('mousedown', () => {
   // validate user input
   let guessInput = parseInt(guess.value);
-  if(isNaN(guessInput)){
-    
+  if (isNaN(guessInput)) {
+    message.textContent = `Your entry is not a Number`;
+    message.style.color = 'red';
+  } else if (guessInput < min) {
+    message.textContent = `Your entry ${guessInput} is less than ${min}`;
+    message.style.color = 'red';
+  } else if (guessInput > max) {
+    message.textContent = `Your entry ${guessInput} is greater than ${max}`;
+    message.style.color = 'red';
+  } else {
+    // invoke play game function
+    playGame();
   }
+  return guessInput;
 })
+
 
 
 
