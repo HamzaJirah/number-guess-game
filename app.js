@@ -6,6 +6,7 @@ const min = 1,
 let guessRemaining = 3;
 
 // Get reference to DOM elements
+const replayGame = document.querySelector('.content');
 const minimumNum = document.querySelector('.min-num');
 const maximumNum = document.querySelector('.max-num');
 let guess = document.querySelector('#guess-number');
@@ -18,8 +19,15 @@ const message = document.querySelector('#score-update');
 minimumNum.textContent = min;
 maximumNum.textContent = max;
 
+// Reset Game 
+replayGame.addEventListener('mousedown', e => {
+  e.target.className === 'play-again' ? window.location.reload() : false;
+})
+
+
+
 // listen for user submission
-submitGuess.addEventListener('mousedown', () => {
+submitGuess.addEventListener('click', () => {
   // validate user input
   let guessInput = parseInt(guess.value);
   if(isNaN(guessInput)){
@@ -48,11 +56,21 @@ const playGame = () => {
   if(input === winningNum){
     message.textContent = `${input} is correct, YOU WON!`
     message.style.color = 'green';
-  } else if(input !== winningNum){
-    guessRemaining -= 1;
-    message.textContent = `${input} in incorrect, you have ${guessRemaining} attempts remaining`;
+    submitGuess.className += 'play-again';
+    submitGuess.value = 'Play Again';
+    guess.disabled = true;
+  } else {
+    if(input !== winningNum){
+      guessRemaining -= 1;
+      message.textContent = `${input} in incorrect, you have ${guessRemaining} attempts remaining`;
+    } if(guessRemaining === 0){
+        submitGuess.className += 'play-again';
+        submitGuess.value = 'Play Again';
+        guess.disabled = true;
+    }
   } 
 }
+
 
 
 
