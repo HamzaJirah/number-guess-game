@@ -24,8 +24,6 @@ replayGame.addEventListener('mousedown', e => {
   e.target.className === 'play-again' ? window.location.reload() : false;
 })
 
-
-
 // listen for user submission
 submitGuess.addEventListener('click', () => {
   // validate user input
@@ -54,7 +52,7 @@ function getRandomNum(){
 const playGame = () => {
   let input = parseInt(guess.value);
   if(input === winningNum){
-    message.textContent = `${input} is correct, YOU WON!`
+    message.textContent = `${input} is correct, YOU WON!👍`
     message.style.color = 'green';
     submitGuess.className += 'play-again';
     submitGuess.value = 'Play Again';
@@ -62,8 +60,9 @@ const playGame = () => {
   } else {
     if(input !== winningNum){
       guessRemaining -= 1;
-      message.textContent = `${input} in incorrect, you have ${guessRemaining} attempts remaining`;
+      message.textContent = `${input} is incorrect, you have ${guessRemaining} attempts remaining ⚠️`;
     } if(guessRemaining === 0){
+        message.textContent = `${input} is incorrect, and game over ⛔️`;
         submitGuess.className += 'play-again';
         submitGuess.value = 'Play Again';
         guess.disabled = true;
