@@ -26,10 +26,10 @@ submitGuess.addEventListener('mousedown', () => {
     message.textContent = `Your entry not a number`;
     message.style.color = 'red'; 
   } else if (guessInput < min) {
-    message.textContent = `Your entry ${guessInput} is less than ${min}`;
+    message.textContent = `${guessInput} is less than ${min}`;
     message.style.color = 'red';
   } else if (guessInput > max) {
-    message.textContent = `Your entry ${guessInput} is greater than ${max}`;
+    message.textContent = `${guessInput} is greater than ${max}`;
     message.style.color = 'red';
   } else {
     // invoke play game function
@@ -46,11 +46,11 @@ function getRandomNum(){
 const playGame = () => {
   let input = parseInt(guess.value);
   if(input === winningNum){
-    message.textContent = `Your entry ${input} is correct, YOU WON!`
+    message.textContent = `${input} is correct, YOU WON!`
     message.style.color = 'green';
   } else if(input !== winningNum){
     guessRemaining -= 1;
-    message.textContent = `Your entry ${input} in incorrect, you have ${guessRemaining}     attempts remaining`;
+    message.textContent = `${input} in incorrect, you have ${guessRemaining} attempts remaining`;
   } 
 }
 
